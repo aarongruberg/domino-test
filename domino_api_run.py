@@ -1,3 +1,15 @@
+# Example of calling Domino API to list the runs in a given project
+import requests
+
+headers = {
+    'X-Domino-Api-Key': 'API-KEY'  
+    } 
+
+r = requests.get('https://app.dominodatalab.com/v1/projects/domino-aaron/repo-from-api-46093/runs', headers=headers)
+print(r.json())
+
+
+
 # Example of kicking off a run in cloud prod from Domino API
 # This starts a run of a script 'knowledgeGraphAPI.py' which calls
 # a google api to find the url for a given company.  This script
